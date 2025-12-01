@@ -56,14 +56,15 @@
             this.lstNumeros.Name = "lstNumeros";
             this.lstNumeros.Size = new System.Drawing.Size(120, 292);
             this.lstNumeros.TabIndex = 1;
+            this.lstNumeros.SelectedIndexChanged += new System.EventHandler(this.lstNumeros_SelectedIndexChanged);
             // 
             // btnSelectionSort
             // 
             this.btnSelectionSort.Location = new System.Drawing.Point(151, 123);
             this.btnSelectionSort.Name = "btnSelectionSort";
-            this.btnSelectionSort.Size = new System.Drawing.Size(156, 40);
+            this.btnSelectionSort.Size = new System.Drawing.Size(180, 45);
             this.btnSelectionSort.TabIndex = 2;
-            this.btnSelectionSort.Text = "Selection Sort (seleccion)";
+            this.btnSelectionSort.Text = "Selection Sort";
             this.btnSelectionSort.UseVisualStyleBackColor = true;
             this.btnSelectionSort.Click += new System.EventHandler(this.btnSelectionSort_Click);
             // 
@@ -71,9 +72,9 @@
             // 
             this.btnMergeSort.Location = new System.Drawing.Point(151, 185);
             this.btnMergeSort.Name = "btnMergeSort";
-            this.btnMergeSort.Size = new System.Drawing.Size(156, 37);
+            this.btnMergeSort.Size = new System.Drawing.Size(180, 41);
             this.btnMergeSort.TabIndex = 3;
-            this.btnMergeSort.Text = "Merge Sort (mescla)";
+            this.btnMergeSort.Text = "Merge Sort";
             this.btnMergeSort.UseVisualStyleBackColor = true;
             this.btnMergeSort.Click += new System.EventHandler(this.btnMergeSort_Click);
             // 
@@ -81,7 +82,7 @@
             // 
             this.btnJumpSearch.Location = new System.Drawing.Point(151, 246);
             this.btnJumpSearch.Name = "btnJumpSearch";
-            this.btnJumpSearch.Size = new System.Drawing.Size(156, 35);
+            this.btnJumpSearch.Size = new System.Drawing.Size(180, 44);
             this.btnJumpSearch.TabIndex = 4;
             this.btnJumpSearch.Text = "Búsqueda por Saltos";
             this.btnJumpSearch.UseVisualStyleBackColor = true;
@@ -91,7 +92,7 @@
             // 
             this.btnInterpolation.Location = new System.Drawing.Point(151, 308);
             this.btnInterpolation.Name = "btnInterpolation";
-            this.btnInterpolation.Size = new System.Drawing.Size(156, 38);
+            this.btnInterpolation.Size = new System.Drawing.Size(180, 51);
             this.btnInterpolation.TabIndex = 5;
             this.btnInterpolation.Text = "Búsqueda Interpolada";
             this.btnInterpolation.UseVisualStyleBackColor = true;

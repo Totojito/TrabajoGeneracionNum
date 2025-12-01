@@ -22,9 +22,9 @@ namespace TrabajoLun
         private void button1_Click(object sender, EventArgs e)
         {
             // Aqui se generan 500,000 números aleatorios
-            // se puede cambiar a 1,000,000 y 5,000,000 para probar
+            // se puede cambiar a 1,000,000 y 5,000,000 para probar o lo que sea
 
-            int cantidad = 500000;
+            int cantidad = 1000000;
 
             lstNumeros.DataSource = null;
             lstNumeros.Items.Clear();
@@ -49,9 +49,9 @@ namespace TrabajoLun
         private void btnSelectionSort_Click(object sender, EventArgs e)
         {
   
-            // Con 500,000 datos tardaría horas. Con 5M, días por eso tiene ese limite para que no se pegue.
+            // Con 500,000 datos tardaría hora y ahora con 5M ni se diga dilataria días por eso tiene ese limite para que no se pegue.
 
-            if (Numeros.Count > 20000)
+            if (Numeros.Count > 500000)
             {
                 MessageBox.Show("\nSelection Sort es demasiado lento para esta cantidad de datos.\n" +
                                 "\nLa aplicación se congelaría.\n" +
@@ -62,7 +62,7 @@ namespace TrabajoLun
 
             Stopwatch sw = Stopwatch.StartNew();
 
-            // Algoritmo Selection Sort
+       
             int n = Numeros.Count;
             for (int i = 0; i < n - 1; i++)
             {
@@ -211,11 +211,11 @@ namespace TrabajoLun
        
             lstNumeros.DataSource = null;
 
-            if (Numeros.Count > 100)
+            if (Numeros.Count > 10000000)
             {
-                // Si hay muchos datos, solo se muestran los primeros 100
-                // Usando .Take(100)
-                lstNumeros.DataSource = Numeros.Take(100).ToList();
+                // Si hay muchos datos, solo se muestran los primeros 10000
+                // Usando .Take(10000)
+                lstNumeros.DataSource = Numeros.Take(10000).ToList();
             }
             else
             {
@@ -228,19 +228,24 @@ namespace TrabajoLun
         {
             if (index != -1)
             {
-                // Si el índice encontrado está dentro de los primeros 100 (la vista previa)
-                if (index < 100)
+                // Si el índice encontrado está dentro de los primeros 10000, lo seleccionamos en la lista visual
+                if (index < 10000000)
                 {
                     lstNumeros.SelectedIndex = index;
                 }
 
                 MessageBox.Show($"\nEl número {valorBuscado} está en la posición (índice): {index}\n" +
-                                $"\nla lista visual solo muestra los primeros 100\n");
+                                $"\nla lista visual solo muestra los primeros 1000\n");
             }
             else
             {
                 MessageBox.Show("Numero no encontrado.");
             }
+        }
+
+        private void lstNumeros_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
